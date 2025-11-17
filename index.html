@@ -64,10 +64,27 @@
     </section>
 
     <section>
-        <h2>Contact Us</h2>
-        <p>Email: <strong>info@ietechworks.com</strong></p>
-    </section>
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/info@ietechworks.com" method="POST">
+        <input type="hidden" name="_subject" value="New Inquiry from IE TechWorks Website">
+        <input type="hidden" name="_captcha" value="false">
+        
+        <label>Name</label><br>
+        <input type="text" name="name" required style="width:100%;padding:10px;margin-bottom:10px;"><br>
 
+        <label>Email</label><br>
+        <input type="email" name="email" required style="width:100%;padding:10px;margin-bottom:10px;"><br>
+
+        <label>Message</label><br>
+        <textarea name="message" rows="5" required style="width:100%;padding:10px;margin-bottom:10px;"></textarea><br>
+
+        <button type="submit" 
+            style="background:#f57c00;color:white;padding:12px 20px;border:none;border-radius:6px;cursor:pointer;">
+            Send Message
+        </button>
+    </form>
+    </section>
+    
     <footer>
         © 2025 IE TechWorks — Inland Empire IT Services
     </footer>
