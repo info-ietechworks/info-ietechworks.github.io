@@ -28,20 +28,21 @@ body {
 }
 
 .navbar .logo {
+    /* Centering the image within its container */
     display: flex;
-    align-items: center;
+    justify-content: center; /* Horizontally center */
+    align-items: center;    /* Vertically center (if logo container had height) */
+    width: 150px; /* Give it a defined width to help centering if needed, adjust as desired */
+    padding-left: 0; /* No padding if you want it flush left/centered within its own space */
 }
 
 .navbar .logo-img {
-    height: 60px; /* INCREASED SIZE */
-    margin-right: 15px; /* INCREASED SPACING */
+    height: 80px; /* FURTHER INCREASED SIZE for single logo */
+    margin-right: 0; /* No text next to it, so no margin needed */
 }
 
-.navbar .logo-text {
-    font-size: 2.2em; /* INCREASED SIZE */
-    font-weight: 600;
-    color: #FF8C00; /* Orange for company name in logo text */
-}
+/* Remove .logo-text styles as the text span is gone */
+/* .navbar .logo-text { ... } */
 
 .navbar nav a {
     color: white;
