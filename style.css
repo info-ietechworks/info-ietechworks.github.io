@@ -1,8 +1,8 @@
 /* --- Global Styles & Reset --- */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* REMOVES DEFAULT MARGIN */
+    padding: 0; /* REMOVES DEFAULT PADDING */
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
@@ -14,21 +14,22 @@ body {
     padding: 0 20px;
 }
 
-/* --- Header & Navigation (Black band removed and centered) --- */
+/* --- Header & Navigation (Zero Padding, Seamless Background) --- */
 .navbar {
     background-color: transparent; /* Makes the header invisible/seamless */
     color: white;
-    padding: 0; /* Remove padding */
-    position: relative; /* Allows content below to be positioned correctly */
+    padding: 0; /* REMOVES ALL PADDING */
+    position: relative;
     z-index: 10;
+    margin: 0; /* REMOVES ALL MARGIN */
 }
 
 .navbar .container {
-    /* Use flexbox to center content horizontally */
+    /* Centering the logo horizontally */
     display: flex;
-    justify-content: center; /* Center the logo across the header */
+    justify-content: center; 
     align-items: center;
-    /* Remove min-height here, we will control it with the logo size */
+    padding: 0; /* Removes padding from the container */
 }
 
 /* New element for centering the logo image */
@@ -39,19 +40,20 @@ body {
 }
 
 .navbar .logo-img {
-    height: 400px; /* **INCREASED 5X** (approx. 80px * 5) */
+    height: 600px; /* MASSIVELY INCREASED SIZE */
     width: auto; /* Maintain aspect ratio */
-    margin: 20px 0; /* Add some margin above and below the huge logo */
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); /* Optional: adds a subtle shadow to make it pop */
+    margin: 0; /* REMOVES ALL MARGIN AROUND LOGO */
+    padding: 0; /* REMOVES ALL PADDING AROUND LOGO */
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); 
 }
 
-/* --- Hero Section (Reduced Height) --- */
+/* --- Hero Section (This is now the main content area) --- */
 .hero {
     /* The hero color now acts as the background for the entire header area */
     background-color: #FF8C00;
     color: white;
     text-align: center;
-    padding: 50px 20px; /* REDUCED PADDING */
+    padding: 50px 20px; 
     background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%);
 }
 
