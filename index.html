@@ -12,14 +12,10 @@
 
     <header class="navbar">
         <div class="container">
-            <div class="logo">
-    <img src="your-logo.png" alt="Inland Empire TechWorks Logo" class="logo-img">
-        </div>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact Us</a>
-            </nav>
-        </div>
+            <div class="logo-center">
+                <img src="your-logo.png" alt="Inland Empire TechWorks Logo" class="logo-img">
+            </div>
+            </div>
     </header>
 
     <section id="hero" class="hero">
@@ -112,7 +108,6 @@
             const form = this;
             const formData = new FormData(form);
             
-            // Append required Formsubmit parameters
             formData.append("_subject", "New Inquiry from IE TechWorks Website");
             formData.append("_captcha", "false"); 
             
@@ -122,23 +117,16 @@
             })
             .then(response => {
                  if (response.ok) {
-                    // Success: Reset form and show message
                     form.reset();
                     document.getElementById("thankYouMessage").style.display = "block";
-                    
-                    // Optional: Hide the message after a few seconds
                     setTimeout(() => {
                          document.getElementById("thankYouMessage").style.display = "none";
-                    }, 8000); // Hides after 8 seconds
-
+                    }, 8000);
                 } else {
-                    // Handle server errors or Formsubmit issues
                     alert("There was an error sending your message. Please try again.");
                 }
-                
             })
             .catch(error => {
-                // Handle network errors
                 console.error('Network Error:', error);
                 alert("A network error occurred. Please check your connection.");
             });
