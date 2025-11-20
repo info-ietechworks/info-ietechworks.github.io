@@ -22,11 +22,11 @@ body {
 }
 
 .navbar .container {
-    /* Use flexbox to center content horizontally */
+    /* This centers the logo horizontally across the header */
     display: flex;
-    justify-content: center; /* Center the logo across the header */
+    justify-content: center;
     align-items: center;
-    min-height: 70px; /* Ensure a minimum height for the header */
+    min-height: 70px; 
 }
 
 /* New element for centering the logo image */
@@ -38,7 +38,7 @@ body {
 
 .navbar .logo-img {
     height: 80px; /* INCREASED SIZE for a standalone logo */
-    /* All other spacing removed */
+    /* This makes the logo larger */
 }
 
 /* --- Hero Section (Reduced Height) --- */
