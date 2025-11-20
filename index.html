@@ -13,8 +13,8 @@
     <header class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="your-logo.png" alt="IE TechWorks Logo" class="logo-img">
-                <span class="logo-text">IE TechWorks</span>
+                <img src="your-logo.png" alt="Inland Empire TechWorks Logo" class="logo-img">
+                <span class="logo-text">Inland Empire TechWorks</span>
             </div>
             <nav>
                 <a href="#services">Services</a>
@@ -95,7 +95,8 @@
             <div id="thankYouMessage" class="thank-you-banner" style="display:none;">
                  ✔️ Thank you! Your message has been sent. We’ll get back to you shortly.
             </div>
-            </div>
+
+        </div>
     </section>
 
     <footer>
@@ -115,8 +116,7 @@
             // Append required Formsubmit parameters
             formData.append("_subject", "New Inquiry from IE TechWorks Website");
             formData.append("_captcha", "false"); 
-            // The email destination is in the fetch URL for Formsubmit.co
-
+            
             fetch("https://formsubmit.co/info@ietechworks.com", {
                 method: "POST",
                 body: formData
