@@ -1,20 +1,20 @@
 /* --- Global Styles & Reset --- */
 body {
-    font-family: 'Poppins', sans-serif; /* Use the imported Google Font */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Light grey background */
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px; /* Slightly wider container for services grid */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- Header & Navigation --- */
+/* --- Header & Navigation (Centered Logo) --- */
 .navbar {
     background-color: #222; /* Darker black for header */
     color: white;
@@ -22,47 +22,32 @@ body {
 }
 
 .navbar .container {
+    /* Use flexbox to center content horizontally */
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the logo across the header */
     align-items: center;
+    min-height: 70px; /* Ensure a minimum height for the header */
 }
 
-.navbar .logo {
-    /* Centering the image within its container */
+/* New element for centering the logo image */
+.navbar .logo-center {
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center;    /* Vertically center (if logo container had height) */
-    width: 150px; /* Give it a defined width to help centering if needed, adjust as desired */
-    padding-left: 0; /* No padding if you want it flush left/centered within its own space */
+    justify-content: center;
+    width: 100%; /* Take up full container width for centering */
 }
 
 .navbar .logo-img {
-    height: 80px; /* FURTHER INCREASED SIZE for single logo */
-    margin-right: 0; /* No text next to it, so no margin needed */
-}
-
-/* Remove .logo-text styles as the text span is gone */
-/* .navbar .logo-text { ... } */
-
-.navbar nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-.navbar nav a:hover {
-    color: #FF8C00; /* Orange hover color */
+    height: 80px; /* INCREASED SIZE for a standalone logo */
+    /* All other spacing removed */
 }
 
 /* --- Hero Section (Reduced Height) --- */
 .hero {
-    background-color: #FF8C00; /* Primary orange for hero */
+    background-color: #FF8C00;
     color: white;
     text-align: center;
     padding: 50px 20px; /* REDUCED PADDING */
-    background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%); /* Subtle gradient */
+    background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%);
 }
 
 .hero h1 {
@@ -80,7 +65,7 @@ body {
 /* --- Buttons --- */
 .button {
     display: inline-block;
-    background-color: #444; /* Dark grey button */
+    background-color: #444;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -247,19 +232,13 @@ footer {
         flex-direction: column;
     }
     .navbar .logo-img {
-        height: 45px; /* Adjust size on smaller screens */
+        height: 60px; /* Adjust size on smaller screens */
     }
-    .navbar .logo-text {
-        font-size: 1.8em; /* Adjust size on smaller screens */
-    }
-    .navbar nav {
-        margin-top: 15px;
-    }
-    .service-grid {
-        grid-template-columns: 1fr;
+    .navbar .logo-center {
+        width: 100%;
     }
     .hero {
-        padding: 40px 15px; /* Adjust padding further for small screens */
+        padding: 40px 15px;
     }
     .hero h1 {
         font-size: 2em;
