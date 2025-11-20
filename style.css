@@ -1,8 +1,8 @@
 /* --- Global Styles & Reset --- */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0; /* REMOVES DEFAULT MARGIN */
-    padding: 0; /* REMOVES DEFAULT PADDING */
+    margin: 0; /* REMOVES DEFAULT BODY MARGINS */
+    padding: 0; /* REMOVES DEFAULT BODY PADDINGS */
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
@@ -18,18 +18,19 @@ body {
 .navbar {
     background-color: transparent; /* Makes the header invisible/seamless */
     color: white;
-    padding: 0; /* REMOVES ALL PADDING */
+    padding: 0; /* REMOVES PADDING */
+    margin-top: 0; /* Ensures it is flush with the top of the body */
+    margin-bottom: 0;
     position: relative;
     z-index: 10;
-    margin: 0; /* REMOVES ALL MARGIN */
 }
 
 .navbar .container {
-    /* Centering the logo horizontally */
     display: flex;
     justify-content: center; 
     align-items: center;
-    padding: 0; /* Removes padding from the container */
+    padding: 0;
+    margin: 0;
 }
 
 /* New element for centering the logo image */
@@ -37,13 +38,16 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar .logo-img {
     height: 600px; /* MASSIVELY INCREASED SIZE */
-    width: auto; /* Maintain aspect ratio */
+    width: auto; 
     margin: 0; /* REMOVES ALL MARGIN AROUND LOGO */
     padding: 0; /* REMOVES ALL PADDING AROUND LOGO */
+    vertical-align: top; /* Prevents inline block spacing issue */
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); 
 }
 
@@ -53,6 +57,7 @@ body {
     background-color: #FF8C00;
     color: white;
     text-align: center;
+    /* We are keeping padding here to space the text and button from the logo */
     padding: 50px 20px; 
     background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%);
 }
