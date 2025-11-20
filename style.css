@@ -1,0 +1,287 @@
+/* --- Global Styles & Reset --- */
+body {
+    font-family: 'Poppins', sans-serif; /* Use the imported Google Font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Light grey background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Slightly wider container for services grid */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+.navbar {
+    background-color: #222; /* Darker black for header */
+    color: white;
+    padding: 15px 0;
+    /* Use flexbox for alignment inside the container */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo-img {
+    height: 40px; /* Adjust logo size as needed */
+    margin-right: 10px;
+}
+
+.navbar .logo-text {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #FF8C00; /* Orange for company name in logo text */
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #FF8C00; /* Orange hover color */
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: #FF8C00; /* Primary orange for hero */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%); /* Subtle gradient */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* --- Buttons --- */
+.button {
+    display: inline-block;
+    background-color: #444; /* Dark grey button */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; /* No default border */
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* --- Content Sections --- */
+.content-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #FF8C00;
+    border-radius: 5px;
+}
+
+/* --- Services Grid --- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-item i {
+    color: #FF8C00; /* Orange icon color */
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.6em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* --- Contact Form --- */
+.contact-section {
+    background-color: #eee; /* Light grey background for contact section */
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: left; /* Align form elements left */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #FF8C00;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.2);
+}
+
+.contact-section .button {
+    width: auto; /* Button doesn't take full width */
+    margin-top: 10px;
+    background-color: #FF8C00; /* Orange submit button */
+    color: white;
+}
+
+.contact-section .button:hover {
+    background-color: #e67e00; /* Darker orange on hover */
+}
+
+.thank-you-banner {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #222; /* Darker black for footer */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .navbar nav {
+        margin-top: 15px;
+    }
+    .navbar nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .service-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    .service-item {
+        padding: 20px;
+    }
+    .contact-section form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo-img {
+        height: 30px;
+    }
+    .navbar .logo-text {
+        font-size: 1.2em;
+    }
+    .navbar nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    .hero {
+        padding: 80px 15px;
+    }
+}
