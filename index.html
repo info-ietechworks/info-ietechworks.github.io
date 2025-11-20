@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inland Empire TechWorks - Managed IT Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="your-logo.png" alt="IE TechWorks Logo" class="logo-img">
+                <span class="logo-text">IE TechWorks</span>
+            </div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Your Trusted Partner for Small to Medium Business IT</h1>
+            <p>Reliable Managed IT Support, Security, and Cloud Solutions for the Inland Empire.</p>
+            <a href="#services" class="button">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-headset fa-3x"></i>
+                    <h3>Managed IT Support</h3>
+                    <p>Proactive monitoring, maintenance, and helpdesk support to keep your operations running smoothly.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-network-wired fa-3x"></i>
+                    <h3>Network Setup & Maintenance</h3>
+                    <p>Design, implementation, and ongoing management of robust and reliable network infrastructures.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-shield-alt fa-3x"></i>
+                    <h3>Security & Firewall Management</h3>
+                    <p>Protecting your business with advanced cybersecurity measures and expert firewall configuration.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-cloud fa-3x"></i>
+                    <h3>Cloud & Email Services</h3>
+                    <p>Seamless migration, setup, and management of cloud platforms and professional email solutions.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-phone-alt fa-3x"></i>
+                    <h3>VoIP & Remote Work Setup</h3>
+                    <p>Modern communication systems and secure remote access solutions for a flexible workforce.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-laptop-code fa-3x"></i>
+                    <h3>On-site/Remote Troubleshooting</h3>
+                    <p>Expert problem-solving, wherever you are – efficient support for immediate IT challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Ready to enhance your business's technology? Send us a message!</p>
+
+            <form id="contactForm" class="contact-form-style">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Request:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button">
+                    Send Message
+                </button>
+            </form>
+
+            <div id="thankYouMessage" class="thank-you-banner" style="display:none;">
+                 ✔️ Thank you! Your message has been sent. We’ll get back to you shortly.
+            </div>
+            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Inland Empire TechWorks. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Formsubmit.co AJAX handling
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const formData = new FormData(form);
+            
+            // Append required Formsubmit parameters
+            formData.append("_subject", "New Inquiry from IE TechWorks Website");
+            formData.append("_captcha", "false"); 
+            // The email destination is in the fetch URL for Formsubmit.co
+
+            fetch("https://formsubmit.co/info@ietechworks.com", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                 if (response.ok) {
+                    // Success: Reset form and show message
+                    form.reset();
+                    document.getElementById("thankYouMessage").style.display = "block";
+                    
+                    // Optional: Hide the message after a few seconds
+                    setTimeout(() => {
+                         document.getElementById("thankYouMessage").style.display = "none";
+                    }, 8000); // Hides after 8 seconds
+
+                } else {
+                    // Handle server errors or Formsubmit issues
+                    alert("There was an error sending your message. Please try again.");
+                }
+                
+            })
+            .catch(error => {
+                // Handle network errors
+                console.error('Network Error:', error);
+                alert("A network error occurred. Please check your connection.");
+            });
+        });
+    </script>
+
+</body>
+</html>
