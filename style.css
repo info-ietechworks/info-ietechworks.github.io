@@ -14,35 +14,40 @@ body {
     padding: 0 20px;
 }
 
-/* --- Header & Navigation (Centered Logo) --- */
+/* --- Header & Navigation (Black band removed and centered) --- */
 .navbar {
-    background-color: #222; /* Darker black for header */
+    background-color: transparent; /* Makes the header invisible/seamless */
     color: white;
-    padding: 15px 0;
+    padding: 0; /* Remove padding */
+    position: relative; /* Allows content below to be positioned correctly */
+    z-index: 10;
 }
 
 .navbar .container {
-    /* This centers the logo horizontally across the header */
+    /* Use flexbox to center content horizontally */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the logo across the header */
     align-items: center;
-    min-height: 70px; 
+    /* Remove min-height here, we will control it with the logo size */
 }
 
 /* New element for centering the logo image */
 .navbar .logo-center {
     display: flex;
     justify-content: center;
-    width: 100%; /* Take up full container width for centering */
+    width: 100%;
 }
 
 .navbar .logo-img {
-    height: 80px; /* INCREASED SIZE for a standalone logo */
-    /* This makes the logo larger */
+    height: 400px; /* **INCREASED 5X** (approx. 80px * 5) */
+    width: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Add some margin above and below the huge logo */
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); /* Optional: adds a subtle shadow to make it pop */
 }
 
 /* --- Hero Section (Reduced Height) --- */
 .hero {
+    /* The hero color now acts as the background for the entire header area */
     background-color: #FF8C00;
     color: white;
     text-align: center;
@@ -232,7 +237,7 @@ footer {
         flex-direction: column;
     }
     .navbar .logo-img {
-        height: 60px; /* Adjust size on smaller screens */
+        height: 200px; /* Adjust size for small screens */
     }
     .navbar .logo-center {
         width: 100%;
