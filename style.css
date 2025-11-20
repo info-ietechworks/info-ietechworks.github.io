@@ -19,7 +19,6 @@ body {
     background-color: #222; /* Darker black for header */
     color: white;
     padding: 15px 0;
-    /* Use flexbox for alignment inside the container */
 }
 
 .navbar .container {
@@ -34,12 +33,12 @@ body {
 }
 
 .navbar .logo-img {
-    height: 40px; /* Adjust logo size as needed */
-    margin-right: 10px;
+    height: 60px; /* INCREASED SIZE */
+    margin-right: 15px; /* INCREASED SPACING */
 }
 
 .navbar .logo-text {
-    font-size: 1.6em;
+    font-size: 2.2em; /* INCREASED SIZE */
     font-weight: 600;
     color: #FF8C00; /* Orange for company name in logo text */
 }
@@ -56,12 +55,12 @@ body {
     color: #FF8C00; /* Orange hover color */
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Reduced Height) --- */
 .hero {
     background-color: #FF8C00; /* Primary orange for hero */
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 20px; /* REDUCED PADDING */
     background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%); /* Subtle gradient */
 }
 
@@ -87,7 +86,7 @@ body {
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    border: none; /* No default border */
+    border: none;
     cursor: pointer;
 }
 
@@ -125,7 +124,7 @@ body {
 /* --- Services Grid --- */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -145,7 +144,7 @@ body {
 }
 
 .service-item i {
-    color: #FF8C00; /* Orange icon color */
+    color: #FF8C00;
     margin-bottom: 20px;
 }
 
@@ -162,7 +161,7 @@ body {
 
 /* --- Contact Form --- */
 .contact-section {
-    background-color: #eee; /* Light grey background for contact section */
+    background-color: #eee;
 }
 
 .contact-section form {
@@ -172,7 +171,7 @@ body {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    text-align: left; /* Align form elements left */
+    text-align: left;
 }
 
 .form-group {
@@ -194,11 +193,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    box-sizing: border-box; /* Include padding in width */
-}
-
-.form-group textarea {
-    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -208,15 +203,19 @@ body {
     box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.2);
 }
 
+.form-group textarea {
+    resize: vertical;
+}
+
 .contact-section .button {
-    width: auto; /* Button doesn't take full width */
+    width: auto;
     margin-top: 10px;
-    background-color: #FF8C00; /* Orange submit button */
+    background-color: #FF8C00;
     color: white;
 }
 
 .contact-section .button:hover {
-    background-color: #e67e00; /* Darker orange on hover */
+    background-color: #e67e00;
 }
 
 .thank-you-banner {
@@ -233,7 +232,7 @@ body {
 
 /* --- Footer --- */
 footer {
-    background-color: #222; /* Darker black for footer */
+    background-color: #222;
     color: white;
     text-align: center;
     padding: 30px 0;
@@ -246,42 +245,22 @@ footer {
     .navbar .container {
         flex-direction: column;
     }
+    .navbar .logo-img {
+        height: 45px; /* Adjust size on smaller screens */
+    }
+    .navbar .logo-text {
+        font-size: 1.8em; /* Adjust size on smaller screens */
+    }
     .navbar nav {
         margin-top: 15px;
     }
-    .navbar nav a {
-        margin: 0 10px;
-        font-size: 0.9em;
-    }
-    .hero h1 {
-        font-size: 2.2em;
-    }
-    .hero p {
-        font-size: 1em;
-    }
     .service-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
-    }
-    .service-item {
-        padding: 20px;
-    }
-    .contact-section form {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar .logo-img {
-        height: 30px;
-    }
-    .navbar .logo-text {
-        font-size: 1.2em;
-    }
-    .navbar nav a {
-        display: block;
-        margin: 5px 0;
+        grid-template-columns: 1fr;
     }
     .hero {
-        padding: 80px 15px;
+        padding: 40px 15px; /* Adjust padding further for small screens */
+    }
+    .hero h1 {
+        font-size: 2em;
     }
 }
