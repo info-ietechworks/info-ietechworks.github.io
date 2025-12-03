@@ -1,100 +1,264 @@
-/* ------------------------------
-   Global Styles
------------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- Global Styles & Reset (Aggressive Reset) --- */
+html, body {
+    margin: 0; /* Ensures the page starts exactly at the top edge */
+    padding: 0; /* Ensures no browser default padding */
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrollbar if elements slightly overflow */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #222;
-    background-color: #ffffff;
+    background-color: #f4f4f9;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Color Variables */
-:root {
-    --primary-blue: #1d4ed8;   /* strong blue */
-    --accent-orange: #f97316;  /* orange */
-    --gray-light: #f3f4f6;
-    --gray-dark: #555;
-    --black: #000;
-}
-
-/* ------------------------------
-   Navbar / Header
------------------------------- */
-
-.navbar {
-    width: 100%;
-    background: #ffffff;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-}
-
-.logo-img {
-    width: 220px;
-    height: auto;
-    display: block;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* ------------------------------
-   Hero Section
------------------------------- */
+/* --- Header & Navigation (Zero Padding, Seamless Background, Perfect Centering) --- */
+.navbar {
+    background-color: transparent; /* Makes the header invisible/seamless */
+    color: white;
+    padding: 0; /* REMOVES PADDING */
+    margin: 0; /* REMOVES MARGIN */
+    position: relative;
+    z-index: 10;
+}
 
-.hero {
+.navbar .container {
+    /* Set the container to use Flexbox and center content */
+    display: flex;
+    justify-content: center; /* PERFECT HORIZONTAL CENTERING */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo container for explicit centering */
+.navbar .logo-center {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    padding: 120px 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .logo-img {
+    height: 600px; /* MASSIVELY INCREASED SIZE */
+    width: auto;
+    margin: 0; /* REMOVES ALL MARGIN AROUND LOGO */
+    padding: 0; /* REMOVES ALL PADDING AROUND LOGO */
+    vertical-align: top; /* Fixes possible whitespace under image */
+    line-height: 0; /* Fixes possible line-height whitespace issue */
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); 
+}
+
+/* --- Hero Section (This is the content that follows the logo) --- */
+.hero {
+    /* The hero color acts as the background below the logo */
+    background-color: #FF8C00;
+    color: white;
     text-align: center;
-    background: var(--gray-light);
+    /* We are keeping padding here to space the text and button */
+    padding: 50px 20px; 
+    background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--black);
+    font-size: 3em;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    color: var(--gray-dark);
-    max-width: 800px;
-    margin: 0 auto 25px;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    font-weight: 300;
 }
 
+/* --- Buttons --- */
 .button {
     display: inline-block;
+    background-color: #444;
+    color: white;
     padding: 12px 25px;
-    background: var(--accent-orange);
-    color: #fff;
-    font-weight: 600;
-    border-radius: 6px;
     text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     border: none;
+    cursor: pointer;
 }
 
-/* ------------------------------
-   Sections
------------------------------- */
+.button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
 
+/* --- Content Sections --- */
 .content-section {
-    padding: 80px 20px;
+    padding: 60px 0;
     text-align: center;
 }
 
 .content-section h2 {
-    font-size: 2rem;
+    font-size: 2.5em;
     margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-/* ------------------------------
-   Services Grid
------------------------------- */
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #FF8C00;
+    border-radius: 5px;
+}
 
+/* --- Services Grid --- */
 .service-grid {
-    display: grid
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-item i {
+    color: #FF8C00;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.6em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* --- Contact Form --- */
+.contact-section {
+    background-color: #eee;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #FF8C00;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-section .button {
+    width: auto;
+    margin-top: 10px;
+    background-color: #FF8C00;
+    color: white;
+}
+
+.contact-section .button:hover {
+    background-color: #e67e00;
+}
+
+.thank-you-banner {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .navbar .logo-img {
+        height: 200px; /* Adjust size for small screens */
+    }
+    .navbar .logo-center {
+        width: 100%;
+    }
+    .hero {
+        padding: 40px 15px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+}
