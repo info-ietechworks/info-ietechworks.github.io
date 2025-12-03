@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <header class="navbar">
-    <div class="logo-wrapper">
-        <img src="your-logo.png" alt="Inland Empire TechWorks Logo" class="logo-img">
-    </div>
-</header>
+        <div class="container">
+            <div class="logo-center">
+                <img src="your-logo.png" alt="Inland Empire TechWorks Logo" class="logo-img">
+            </div>
+        </div>
+    </header>
+
     <section id="hero" class="hero">
         <div class="container">
             <h1>Your Trusted Partner for Small to Medium Business IT</h1>
@@ -21,6 +25,7 @@
             <a href="#services" class="button">Explore Our Services</a>
         </div>
     </section>
+
     <section id="services" class="content-section">
         <div class="container">
             <h2>Our Services</h2>
@@ -103,6 +108,7 @@
             const form = this;
             const formData = new FormData(form);
             
+            // Append required Formsubmit parameters
             formData.append("_subject", "New Inquiry from IE TechWorks Website");
             formData.append("_captcha", "false"); 
             
@@ -112,16 +118,23 @@
             })
             .then(response => {
                  if (response.ok) {
+                    // Success: Reset form and show message
                     form.reset();
                     document.getElementById("thankYouMessage").style.display = "block";
+                    
+                    // Optional: Hide the message after a few seconds
                     setTimeout(() => {
                          document.getElementById("thankYouMessage").style.display = "none";
-                    }, 8000);
+                    }, 8000); // Hides after 8 seconds
+
                 } else {
-                    alert("There was an error sending your message. Please try again.");
+                    // Handle server errors or Formsubmit issues
+                    alert("There was an error sending your message. Please try nobody.");
                 }
+                
             })
             .catch(error => {
+                // Handle network errors
                 console.error('Network Error:', error);
                 alert("A network error occurred. Please check your connection.");
             });
