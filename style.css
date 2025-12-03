@@ -1,9 +1,9 @@
-/* --- Global Styles & Reset (Aggressive Reset) --- */
+/* --- Global Styles & Reset --- */
 html, body {
-    margin: 0; /* Ensures the page starts exactly at the top edge */
-    padding: 0; /* Ensures no browser default padding */
+    margin: 0; 
+    padding: 0; 
     width: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrollbar if elements slightly overflow */
+    overflow-x: hidden;
 }
 
 body {
@@ -19,51 +19,15 @@ body {
     padding: 0 20px;
 }
 
-/* --- Header & Navigation (Zero Padding, Seamless Background, Perfect Centering) --- */
-.navbar {
-    background-color: transparent; /* Makes the header invisible/seamless */
-    color: white;
-    padding: 0; /* REMOVES PADDING */
-    margin: 0; /* REMOVES MARGIN */
-    position: relative;
-    z-index: 10;
-}
+/* --- Header & Navigation (Styling removed) --- */
+/* If you ever want to re-add the logo, you can paste the navbar styles here */
 
-.navbar .container {
-    /* Set the container to use Flexbox and center content */
-    display: flex;
-    justify-content: center; /* PERFECT HORIZONTAL CENTERING */
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
 
-/* Logo container for explicit centering */
-.navbar .logo-center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar .logo-img {
-    height: 600px; /* MASSIVELY INCREASED SIZE */
-    width: auto;
-    margin: 0; /* REMOVES ALL MARGIN AROUND LOGO */
-    padding: 0; /* REMOVES ALL PADDING AROUND LOGO */
-    vertical-align: top; /* Fixes possible whitespace under image */
-    line-height: 0; /* Fixes possible line-height whitespace issue */
-    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); 
-}
-
-/* --- Hero Section (This is the content that follows the logo) --- */
+/* --- Hero Section (This is the new top of the page) --- */
 .hero {
-    /* The hero color acts as the background below the logo */
     background-color: #FF8C00;
     color: white;
     text-align: center;
-    /* We are keeping padding here to space the text and button */
     padding: 50px 20px; 
     background-image: linear-gradient(135deg, #FF8C00 0%, #FFA000 100%);
 }
@@ -246,15 +210,6 @@ footer {
 
 /* --- Responsiveness --- */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-    .navbar .logo-img {
-        height: 200px; /* Adjust size for small screens */
-    }
-    .navbar .logo-center {
-        width: 100%;
-    }
     .hero {
         padding: 40px 15px;
     }
