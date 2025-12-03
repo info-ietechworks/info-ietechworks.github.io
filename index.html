@@ -10,14 +10,6 @@
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <div class="logo-center">
-                <img src="your-logo.png" alt="Inland Empire TechWorks Logo" class="logo-img">
-            </div>
-        </div>
-    </header>
-
     <section id="hero" class="hero">
         <div class="container">
             <h1>Your Trusted Partner for Small to Medium Business IT</h1>
@@ -44,6 +36,7 @@
                     <i class="fas fa-shield-alt fa-3x"></i>
                     <h3>Security & Firewall Management</h3>
                     <p>Protecting your business with advanced cybersecurity measures and expert firewall configuration.</p>
+                </p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-cloud fa-3x"></i>
@@ -108,7 +101,6 @@
             const form = this;
             const formData = new FormData(form);
             
-            // Append required Formsubmit parameters
             formData.append("_subject", "New Inquiry from IE TechWorks Website");
             formData.append("_captcha", "false"); 
             
@@ -118,23 +110,16 @@
             })
             .then(response => {
                  if (response.ok) {
-                    // Success: Reset form and show message
                     form.reset();
                     document.getElementById("thankYouMessage").style.display = "block";
-                    
-                    // Optional: Hide the message after a few seconds
                     setTimeout(() => {
                          document.getElementById("thankYouMessage").style.display = "none";
-                    }, 8000); // Hides after 8 seconds
-
+                    }, 8000);
                 } else {
-                    // Handle server errors or Formsubmit issues
-                    alert("There was an error sending your message. Please try nobody.");
+                    alert("There was an error sending your message. Please try again.");
                 }
-                
             })
             .catch(error => {
-                // Handle network errors
                 console.error('Network Error:', error);
                 alert("A network error occurred. Please check your connection.");
             });
