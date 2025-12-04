@@ -35,7 +35,7 @@ body {
 }
 
 .logo-img {
-    height: 350px; /* Large, fixed height */
+    height: 315px; /* Large, fixed height */
     width: auto;
     margin: 0; /* Removes margin */
     padding: 0; /* Removes padding */
