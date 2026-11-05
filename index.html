@@ -1,135 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inland Empire TechWorks - Managed IT Solutions</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
 
-    <header class="header-branding-container">
-        <div class="logo-text-wrapper">
-            <img src="your-logo.png" alt="Inland Empire TechWorks Logo" class="logo-img">
-        </div>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="container">
-            <h1>Your Trusted Partner for Small to Medium Business IT</h1>
-            <p>Reliable Managed IT Support, Security, and Cloud Solutions for the Inland Empire.</p>
-            <a href="#services" class="button">Explore Our Services</a>
-        </div>
-    </section>
-
-    <section id="services" class="content-section">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <i class="fas fa-headset fa-3x"></i>
-                    <h3>Managed IT Support</h3>
-                    <p>Proactive monitoring, maintenance, and helpdesk support to keep your operations running smoothly.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-network-wired fa-3x"></i>
-                    <h3>Network Setup & Maintenance</h3>
-                    <p>Design, implementation, and ongoing management of robust and reliable network infrastructures.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-shield-alt fa-3x"></i>
-                    <h3>Security & Firewall Management</h3>
-                    <p>Protecting your business with advanced cybersecurity measures and expert firewall configuration.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-cloud fa-3x"></i>
-                    <h3>Cloud & Email Services</h3>
-                    <p>Seamless migration, setup, and management of cloud platforms and professional email solutions.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-phone-alt fa-3x"></i>
-                    <h3>VoIP & Remote Work Setup</h3>
-                    <p>Modern communication systems and secure remote access solutions for a flexible workforce.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-laptop-code fa-3x"></i>
-                    <h3>On-site/Remote Troubleshooting</h3>
-                    <p>Expert problem-solving, wherever you are – efficient support for immediate IT challenges.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="content-section contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Ready to enhance your business's technology? Send us a message!</p>
-
-            <form id="contactForm" class="contact-form-style">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Request:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="button">
-                    Send Message
-                </button>
-            </form>
-
-            <div id="thankYouMessage" class="thank-you-banner" style="display:none;">
-                 ✔️ Thank you! Your message has been sent. We’ll get back to you shortly.
-            </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Inland Empire TechWorks. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Formsubmit.co AJAX handling
-        document.getElementById("contactForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const form = this;
-            const formData = new FormData(form);
-            
-            formData.append("_subject", "New Inquiry from IE TechWorks Website");
-            formData.append("_captcha", "false"); 
-            
-            fetch("https://formsubmit.co/info@ietechworks.com", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => {
-                 if (response.ok) {
-                    form.reset();
-                    document.getElementById("thankYouMessage").style.display = "block";
-                    setTimeout(() => {
-                         document.getElementById("thankYouMessage").style.display = "none";
-                    }, 8000);
-                } else {
-                    alert("There was an error sending your message. Please try again.");
-                }
-            })
-            .catch(error => {
-                console.error('Network Error:', error);
-                alert("A network error occurred. Please check your connection.");
-            });
-        });
-    </script>
-
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#071c3a" name="theme-color"/><meta content="Managed IT services, structured cabling, cybersecurity, business Wi-Fi and cloud solutions for small and midsize businesses in the Inland Empire. Request a consultation." name="description"/><title>Managed IT Services &amp; Business Networking | Inland Empire TechWorks</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="style.css" rel="stylesheet"/><meta content="Inland Empire TechWorks | Business IT Solutions" property="og:title"/><meta content="Managed IT, networking, structured cabling and digital solutions for growing businesses in the Inland Empire." property="og:description"/><meta content="website" property="og:type"/><meta content="https://ietechworks.com/" property="og:url"/><link href="https://ietechworks.com/" rel="canonical"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/></head>
+<body><header class="site-header"><div class="container nav"><a aria-label="Inland Empire TechWorks home" class="brand" href="#home"><img alt="Inland Empire TechWorks" src="logo.png"/></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle">☰</button><nav aria-label="Main navigation" id="main-nav"><a href="#services">Services</a><a href="#managed">Managed IT</a><a href="#process">Our Process</a><a href="#about">About</a><a href="#service-area">Service Area</a><a class="nav-cta" href="#contact">Get a Quote</a></nav></div></header>
+<main id="home"><section class="hero"><div class="hero-glow"></div><div class="container hero-layout"><div class="hero-copy"><div class="eyebrow">IT SOLUTIONS FOR SMALL &amp; MIDSIZE BUSINESSES</div><h1>Your business runs on technology. <em>We make it work.</em></h1><p>Managed IT, secure networks, structured cabling, cloud services, and digital solutions for growing businesses and multi-location teams across the Inland Empire.</p><div class="hero-actions"><a class="btn btn-primary" href="#contact">Request a Free Initial Consultation ↗</a><a class="btn btn-outline" href="#services">Explore Services ↓</a></div><div class="hero-proof"><span>LOCAL EXPERTISE</span><i></i><span>PRACTICAL SOLUTIONS</span><i></i><span>BUILT TO SCALE</span></div></div><div aria-hidden="true" class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="central-node">IE<span>TECHWORKS</span></div><div class="floating-pill pill-one">◈   NETWORKING</div><div class="floating-pill pill-two">✦   SECURITY</div><div class="floating-pill pill-three">⌘   MANAGED IT</div><div class="dot dot-a"></div><div class="dot dot-b"></div></div></div></section>
+<section class="intro-strip"><div class="container strip-inner"><strong>BUILT FOR GROWING BUSINESSES</strong><p>From one office to multiple locations — practical IT solutions designed around your operations.</p></div></section>
+<section class="section services" id="services"><div class="container"><div class="section-heading"><div><div class="section-kicker">WHAT WE DO</div><h2>Business technology,<br/>covered from end to end.</h2></div><p>One trusted point of contact for infrastructure projects, ongoing network care, cloud technology, and business websites.</p></div><div class="service-grid">
+<article class="service-card"><div class="service-icon">⌁</div><h3>Structured Cabling &amp; Infrastructure</h3><p>Cat6/Cat6A cabling, patch panels, network racks, cable testing, and office build-outs.</p><span>01 / INFRASTRUCTURE</span></article>
+<article class="service-card"><div class="service-icon">▦</div><h3>Network Setup &amp; Management</h3><p>Firewalls, managed switches, VPNs, secure network design, and multi-site connectivity.</p><span>02 / NETWORKING</span></article>
+<article class="service-card"><div class="service-icon">◉</div><h3>Wireless (Wi-Fi) Solutions</h3><p>Business-grade wireless networks, guest access, coverage planning, and performance tuning.</p><span>03 / WIRELESS</span></article>
+<article class="service-card"><div class="service-icon">▣</div><h3>Managed IT Services</h3><p>Proactive monitoring, maintenance, updates, and remote support tailored to your needs.</p><span>04 / MANAGED SERVICES</span></article>
+<article class="service-card"><div class="service-icon">◇</div><h3>Cybersecurity &amp; Data Protection</h3><p>Firewall management, MFA, endpoint protection, backup planning, and security improvements.</p><span>05 / SECURITY</span></article>
+<article class="service-card"><div class="service-icon">☁</div><h3>Cloud &amp; Business Communications</h3><p>Microsoft 365, business email, cloud services, VoIP, and secure remote access.</p><span>06 / CLOUD</span></article>
+<article class="service-card"><div class="service-icon">⌘</div><h3>Website Design &amp; Development</h3><p>Modern business websites, redesigns, mobile-friendly experiences, and ongoing maintenance.</p><span>07 / DIGITAL</span></article>
+<article class="service-card"><div class="service-icon">◎</div><h3>Security Cameras &amp; Smart Technology</h3><p>IP surveillance, NVRs, remote viewing, and smart office network integration.</p><span>08 / SMART SYSTEMS</span></article>
+</div><p class="service-note">Services and installation availability are subject to project scope and applicable licensing requirements.</p></div></section>
+<section class="managed section" id="managed"><div class="container managed-layout"><div><div class="section-kicker light">ONGOING SUPPORT</div><h2>Managed IT that supports<br/><span>your next stage of growth.</span></h2><p>Choose a monthly network management or managed IT arrangement tailored to your locations, equipment, and support needs. We focus on visibility, planned maintenance, and practical improvements — with clear support terms.</p><a class="btn btn-primary" href="#contact">Ask About Managed IT ↗</a></div><div class="managed-points"><div><b>01</b><span><strong>Proactive Monitoring</strong><small>Visibility into critical network equipment and services.</small></span></div><div><b>02</b><span><strong>Preventive Maintenance</strong><small>Scheduled updates, reviews, and configuration care.</small></span></div><div><b>03</b><span><strong>Flexible Support</strong><small>Support arrangements based on your business needs.</small></span></div><div><b>04</b><span><strong>Multi-Location Network Care</strong><small>Consistent configurations and visibility across business sites.</small></span></div></div></div></section><section class="section process-section" id="process"><div class="container"><div class="section-kicker">HOW WE WORK</div><h2>A straightforward path to better IT.</h2><p class="section-lead">Clear recommendations, scoped projects, and support options that fit your operations.</p><div class="process-grid"><article><b>01</b><h3>Discover</h3><p>We discuss your needs, locations, pain points, and priorities.</p></article><article><b>02</b><h3>Plan</h3><p>You receive practical recommendations and a clearly defined scope.</p></article><article><b>03</b><h3>Implement</h3><p>We coordinate installation, configuration, testing, and handoff.</p></article><article><b>04</b><h3>Support</h3><p>Choose ongoing monitoring, maintenance, and scheduled support where appropriate.</p></article></div><a class="btn btn-primary" href="#contact">Discuss Your Project ↗</a></div></section>
+<section class="section about" id="about"><div class="container about-layout"><div class="about-visual"><div class="big-ie">IE<span>TW</span></div><div class="about-tag">LOCAL ROOTS.<br/>MODERN THINKING.</div></div><div><div class="section-kicker">WHY IE TECHWORKS</div><h2>Your business deserves technology that just works.</h2><p>Inland Empire TechWorks provides hands-on IT consulting and infrastructure solutions for small and midsize organizations. Our approach is grounded in extensive professional experience with enterprise networking, cloud environments, and secure connectivity — translated into practical solutions for your business.</p><div class="value-grid"><div><strong>Local &amp; Responsive</strong><small>Personalized service in the Inland Empire.</small></div><div><strong>Business-Focused</strong><small>Solutions aligned with how you operate.</small></div><div><strong>Security-Minded</strong><small>Protection built into the plan.</small></div><div><strong>Built to Grow</strong><small>Technology that scales with your business.</small></div></div></div></div></section><section class="section area-section" id="service-area"><div class="container area-layout"><div><div class="section-kicker">LOCAL SERVICE AREA</div><h2>Based in the Inland Empire. Built for local business.</h2><p>Serving businesses throughout the Inland Empire and nearby Southern California communities, with remote support options for eligible projects. On-site availability depends on location and scheduling.</p><a class="btn btn-primary" href="#contact">Check Service Availability ↗</a></div><div class="area-panel"><strong>COMMON PROJECTS</strong><ul><li>New office and branch network installations</li><li>Multi-site VPN and connectivity improvements</li><li>Business Wi-Fi and network refreshes</li><li>Managed network monitoring and maintenance</li><li>Cloud, email, and website projects</li></ul></div></div></section>
+<section class="contact section" id="contact"><div class="container contact-layout"><div><div class="section-kicker light">LET'S CONNECT</div><h2>Have a project<br/>in mind?</h2><p>Tell us what you're working on. We'll help you find a practical way forward.</p><a class="contact-link" href="tel:+19092781990">(909) 278-1990 ↗</a><a class="contact-link" href="mailto:info@ietechworks.com">info@ietechworks.com ↗</a><div class="contact-location">SERVING THE INLAND EMPIRE &amp; SURROUNDING AREAS</div></div><div class="form-card"><h3>Request a consultation</h3><p>Share a few details and we'll get back to you.</p><form id="contactForm"><label for="name">Your name</label><input autocomplete="name" id="name" name="name" placeholder="Full name" required=""/><label for="email">Email address</label><input autocomplete="email" id="email" name="email" placeholder="you@company.com" required="" type="email"/><label for="phone">Phone number</label><input autocomplete="tel" id="phone" name="phone" placeholder="(909) 555-0123" required="" type="tel"/><label for="service">What can we help with?</label><select id="service" name="service" required=""><option disabled="" selected="" value="">Select a service</option><option>Managed IT &amp; Network Monitoring</option><option>Structured Cabling &amp; Infrastructure</option><option>Networking, Firewalls &amp; Wi-Fi</option><option>Cybersecurity &amp; Backup</option><option>Microsoft 365, Cloud &amp; VoIP</option><option>Website Design &amp; Development</option><option>Security Cameras &amp; Smart Technology</option><option>IT Consulting / Other</option></select><label for="locations">Number of business locations <span>(optional)</span></label><select id="locations" name="locations"><option value="">Select if known</option><option>1</option><option>2–5</option><option>6–10</option><option>11+</option></select><label for="contact-method">Preferred contact method</label><select id="contact-method" name="preferred_contact"><option>Email</option><option>Phone</option></select><label for="company">Business name</label><input id="company" name="company" placeholder="Business name" required=""/><label for="message">How can we help?</label><textarea id="message" name="message" placeholder="Briefly describe your IT needs. Please do not include passwords, patient records, or other sensitive information." required="" rows="4"></textarea><button class="btn btn-primary form-submit" type="submit">Send Inquiry ↗</button><div aria-live="polite" class="form-status" id="formStatus" role="status"></div><p class="form-disclaimer">Please do not submit passwords, patient information, or other confidential data. By submitting, you agree to be contacted about your inquiry. <a href="privacy.html">Privacy policy</a>.</p></form></div></div></section></main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Inland Empire TechWorks. All rights reserved.</span><span>YOUR TRUSTED IT PARTNER IN THE INLAND EMPIRE</span><a href="privacy.html">Privacy Policy</a></div></footer>
+<script defer="" src="script.js"></script></body></html>

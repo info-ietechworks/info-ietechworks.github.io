@@ -1,0 +1,7 @@
+const menuButton = document.querySelector('.menu-toggle');
+const nav = document.querySelector('#main-nav');
+menuButton.addEventListener('click', () => {const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));
+document.querySelector('#year').textContent=new Date().getFullYear();
+const form=document.querySelector('#contactForm');const status=document.querySelector('#formStatus');
+form.addEventListener('submit',async e=>{e.preventDefault();const button=form.querySelector('button');button.disabled=true;status.textContent='Sending your inquiry…';status.className='form-status';const data=new FormData(form);data.append('_subject','New Inquiry from IE TechWorks Website');data.append('_captcha','false');try{const response=await fetch('https://formsubmit.co/ajax/info@ietechworks.com',{method:'POST',body:data,headers:{Accept:'application/json'}});const result=await response.json();if(!response.ok||result.success===false||result.success==='false')throw new Error('Submission failed');status.textContent='Thank you. Your inquiry was submitted. We will follow up soon.';status.className='form-status success';form.reset();}catch(error){status.textContent='Your message could not be sent. Please email info@ietechworks.com or call (909) 278-1990.';status.className='form-status error';}finally{button.disabled=false;}});
